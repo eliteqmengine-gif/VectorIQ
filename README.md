@@ -1,2 +1,3 @@
 # VectorIQ
-Advanced multi asset trading engine design to recover assets on the blockchain preventing lose of funds 
+Advanced multi asset bot trading engine design to forecast Signals ,backtesting with risk management,with 4 different strategies comes with a historical price bell curve ,also watches institutional financial movements multie media inputs 
+watches all assets, portfolio management bot comes back with 95+% results be advised this app does not guarantee or make any promises of future gains   
