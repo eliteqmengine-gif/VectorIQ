@@ -1,0 +1,20 @@
+from alpha_factory import generate_alpha
+from backtester import backtest
+from ranker import rank_strategies
+
+def run_research(data, n=100):
+    results = []
+
+    for _ in range(n):
+        strat, params = generate_alpha()
+        pnl, returns = backtest(strat, data)
+
+        results.append({
+            "strategy": strat,
+            "params": params,
+            "pnl": pnl,
+            "returns": returns
+        })
+
+    ranked = rank_strategies(results)
+    return ranked[:5]

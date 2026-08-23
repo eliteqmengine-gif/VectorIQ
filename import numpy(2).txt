@@ -1,0 +1,9 @@
+import numpy as np
+
+def build_features(price):
+    return {
+        "momentum": price[-1] - price[-10],
+        "volatility": np.std(price),
+        "mean_reversion": price[-1] - np.mean(price),
+        "skew": np.mean((price - np.mean(price))**3)
+    }

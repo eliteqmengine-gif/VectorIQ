@@ -1,0 +1,3 @@
+def update_live_strategies():
+    top_strategies = run_research(market_data)
+    deploy(top_strategies)

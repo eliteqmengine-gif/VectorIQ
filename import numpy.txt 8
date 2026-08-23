@@ -1,0 +1,11 @@
+import numpy as np
+
+class RLAgent:
+    def __init__(self):
+        self.q = {}
+
+    def update(self, state, action, reward):
+        self.q[(state, action)] = self.q.get((state, action), 0) + 0.1 * reward
+
+    def act(self, state):
+        return max(["buy", "sell", "hold"], key=lambda a: self.q.get((state,a),0))

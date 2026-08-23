@@ -1,0 +1,4 @@
+MAX_SLIPPAGE = 0.0002
+
+def check_slippage(expected, actual):
+    return abs(expected - actual) < MAX_SLIPPAGE

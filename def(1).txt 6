@@ -1,0 +1,7 @@
+def detect_regime(volatility, trend):
+    if volatility > 0.03:
+        return "crisis"
+    elif trend > 0:
+        return "bull"
+    else:
+        return "range"

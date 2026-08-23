@@ -1,0 +1,5 @@
+def combine_alphas(alpha_outputs, weights):
+    score = 0
+    for k in alpha_outputs:
+        score += alpha_outputs[k] * weights.get(k, 0)
+    return score

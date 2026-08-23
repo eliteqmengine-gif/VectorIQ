@@ -1,0 +1,2 @@
+def sharpe(returns):
+    return np.mean(returns) / np.std(returns)

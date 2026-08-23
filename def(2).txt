@@ -1,0 +1,11 @@
+def backtest(strategy, data):
+    pnl = 0
+    returns = []
+
+    for i in range(50, len(data)):
+        signal = strategy(data[:i])
+        ret = signal * (data[i] - data[i-1])
+        pnl += ret
+        returns.append(ret)
+
+    return pnl, returns

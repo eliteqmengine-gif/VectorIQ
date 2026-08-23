@@ -1,0 +1,5 @@
+def smart_execution(signal_strength):
+    if signal_strength > 0.8:
+        return "market"
+    else:
+        return "limit"

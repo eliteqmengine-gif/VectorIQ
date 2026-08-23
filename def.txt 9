@@ -1,0 +1,5 @@
+def backtest(strategy, data):
+    pnl = 0
+    for d in data:
+        pnl += strategy(d)
+    return pnl

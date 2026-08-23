@@ -1,0 +1,7 @@
+def select_alpha_weights(regime):
+    if regime == "bull":
+        return {"trend": 0.6, "mean_reversion": 0.2}
+    elif regime == "crisis":
+        return {"volatility": 0.7}
+    else:
+        return {"mean_reversion": 0.5}

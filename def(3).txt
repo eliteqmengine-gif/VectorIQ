@@ -1,0 +1,3 @@
+def mutate(params):
+    params["threshold"] *= np.random.uniform(0.8, 1.2)
+    return params

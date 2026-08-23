@@ -1,0 +1,7 @@
+import numpy as np
+
+def sharpe(returns):
+    return np.mean(returns) / (np.std(returns) + 1e-6)
+
+def rank_strategies(results):
+    return sorted(results, key=lambda x: sharpe(x["returns"]), reverse=True)

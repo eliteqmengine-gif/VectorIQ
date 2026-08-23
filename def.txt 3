@@ -1,0 +1,2 @@
+def mean_rev_alpha(price_series):
+    return -(price_series[-1] - price_series.mean())
