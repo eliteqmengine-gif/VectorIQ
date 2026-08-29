@@ -1,2 +1,0 @@
-def should_deploy(sharpe, drawdown):
-    return sharpe > 1.5 and drawdown > -0.1
