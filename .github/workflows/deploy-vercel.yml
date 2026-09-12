@@ -1,0 +1,25 @@
+name: Deploy to Vercel
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install deps
+        run: npm ci
+      - name: Build (if needed)
+        run: npm run build --if-present
+      - name: Install Vercel CLI
+        run: npm i -g vercel
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }} # optional
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }} # optional
+        run: vercel --prod --token $VERCEL_TOKEN --confirm --cwd ${{ github.workspace }}
