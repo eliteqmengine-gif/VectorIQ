@@ -2,7 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 body {
-  background-color: #030712;
-  color: #f9fafb;
+  @apply bg-black text-white antialiased;
+  background-image: radial-gradient(circle at top, rgba(34, 211, 238, 0.12), transparent 25%),
+    linear-gradient(180deg, #030712 0%, #020617 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
 }
