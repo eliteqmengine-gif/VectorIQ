@@ -1,6 +1,0 @@
-def build_features(price):
-    return {
-        "momentum": price[-1] - price[-5],
-        "volatility": np.std(price),
-        "mean_dev": price[-1] - np.mean(price)
-    }
