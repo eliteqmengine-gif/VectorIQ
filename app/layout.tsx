@@ -5,6 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "VectorIQ | Quantitative Intelligence",
   description: "AI-driven quantitative trading intelligence platform",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -14,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body>
         {children}
         <Analytics />
