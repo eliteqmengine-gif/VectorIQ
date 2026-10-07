@@ -1,3 +1,0 @@
-def select_best_model(models, data):
-    scores = {m: backtest(m, data) for m in models}
-    return max(scores, key=scores.get)
