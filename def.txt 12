@@ -1,2 +1,0 @@
-def sentiment_score(news):
-    return sum(n["score"] for n in news)
