@@ -1,7 +1,0 @@
-ALPHAS = [
-    "trend",
-    "mean_reversion",
-    "breakout",
-    "volatility",
-    "macro"
-]
