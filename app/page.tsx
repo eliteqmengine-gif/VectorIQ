@@ -1,3 +1,5 @@
+import LiveRiskChart from "@/components/LiveRiskChart";
+
 const navigation = [
   { label: "Command", icon: "⌘", active: true },
   { label: "Signals", icon: "◈" },
@@ -87,6 +89,10 @@ export default function Home() {
             <p>Explore market context</p>
             <span className="card-arrow">→</span>
           </article>
+        </section>
+
+        <section style={{ marginTop: 24 }}>
+          <LiveRiskChart />
         </section>
 
         <section className="trust-row">
