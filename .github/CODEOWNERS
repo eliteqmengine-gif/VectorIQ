@@ -1,0 +1,8 @@
+# Code owners (suggested reviewers for migrations and DB changes)
+
+# Assign ownership of SQL migrations and DB-related files to the DB migrations / DevOps team
+/sql/migrations/ @devops @lead_researcher
+
+# General code ownership — adjust to match your org's team handles
+# * @team/frontend
+# * @team/backend
